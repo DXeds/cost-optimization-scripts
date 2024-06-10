@@ -4,8 +4,8 @@ from botocore.exceptions import ClientError, BotoCoreError
 
 # Configurações
 SSO_PROFILE = 'inserir-profile-sso' #configurar via aws configure sso
-MASTER_ROLE_NAME = 'darede'
-MASTER_ACCOUNT_ID = '466911142877' #conta payer da organização
+MASTER_ROLE_NAME = 'role-de-acess-conta-master'
+MASTER_ACCOUNT_ID = 'id-conta-payer' #conta payer da organização
 
 boto3.setup_default_session(profile_name=SSO_PROFILE)
 sts_client = boto3.client('sts')
